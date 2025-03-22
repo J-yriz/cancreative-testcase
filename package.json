@@ -3,6 +3,9 @@
   "private": false,
   "version": "0.0.1",
   "type": "module",
+  "repository": {
+    "url": "https://github.com/J-yriz/cancreative-testcase"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
