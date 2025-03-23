@@ -69,6 +69,8 @@ export const useGameRawgStore = defineStore("gameRawg", {
         favoriteGames.push(data);
         localStorage.setItem(STORAGE_KEY, JSON.stringify(favoriteGames));
         console.log(`${data.name} telah ditambahkan ke favorit.`);
+      } else {
+        this.removeFavoriteGame(data.id);
       }
     },
 
@@ -83,7 +85,6 @@ export const useGameRawgStore = defineStore("gameRawg", {
       let favoriteGames = this.getFavoriteGames();
       favoriteGames = favoriteGames.filter((game) => game.id !== id);
       localStorage.setItem(STORAGE_KEY, JSON.stringify(favoriteGames));
-      console.log(`Game dengan ID ${id} telah dihapus dari favorit.`);
     },
 
     resetPaging() {
