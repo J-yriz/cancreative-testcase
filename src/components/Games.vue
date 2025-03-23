@@ -91,7 +91,7 @@ fetchData();
                   "
                   class="cursor-pointer"
                 >
-                  <Icon :icon="favoriteData.some((data) => data.id !== datas.id) ? 'material-symbols:favorite-outline-rounded' : 'material-symbols:favorite'" width="30" height="30" class="text-red-300" />
+                  <Icon :icon="favoriteData.some((data) => data.id === datas.id) ? 'material-symbols:favorite' : 'material-symbols:favorite-outline-rounded'" width="30" height="30" class="text-red-300" />
                 </button>
               </div>
             </div>
